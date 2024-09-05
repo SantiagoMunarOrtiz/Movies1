@@ -1,0 +1,46 @@
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar__brand h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar__links li {
+    display: inline-block;
+}
+
+.navbar__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar__links a:hover {
+    color: #f0c14b;
+}
+
+.navbar__profile {
+    font-size: 1.5rem;
+}
+
+.navbar__profile a {
+    color: #fff;
+}

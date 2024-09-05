@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url('@fortawesome/fontawesome-free/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #21212a;
+    --secondary-color: #0e0e15;
+    --accent-color: #fbbf24;
+    --light-color: #cccac6;
+    --dark-color: #333;
+    --border-radius: 10px;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h3 {
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+}
+
+.navbar__brand h1 {
+    font-size: 1.5rem;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+    color: var(--accent-color);
+}
+
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+.movie-card:hover img {
+    transform: scale(1.05); 
+}
+
+.rating {
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.rating.green {
+    color: lightgreen;
+}
+
+.rating.orange {
+    color: orange;
+}
+
+.rating.red {
+    color: red;
+}
+
+.movie-title {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.release-date {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--light-color);
+}
+
+
+.know-more {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.know-more:hover {
+    background-color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
